@@ -8,18 +8,12 @@ body:
         Thanks for reporting a bug! Please fill in the fields below —
         it makes it much easier to figure out what went wrong.
 
-  - type: dropdown
+  - type: input
     id: loader
     attributes:
       label: Loader and Minecraft version
-      description: Which loader and MC version were you playing on?
-      options:
-        - Fabric 26.3
-        - Fabric 1.20.1
-        - NeoForge 1.21.1
-        - Forge 1.20.1
-        - Quilt (using the Fabric build)
-        - Other / not sure
+      description: e.g. "Fabric 26.3", "NeoForge 1.21.1", "Forge 1.20.1"
+      placeholder: "Fabric 1.20.1"
     validations:
       required: true
 
