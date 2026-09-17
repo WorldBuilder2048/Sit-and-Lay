@@ -60,7 +60,6 @@ body:
         If the game crashed, attach the file from your crash-reports
         folder, or paste a link from mclo.gs / pastebin. You can also
         just drag the file directly into this field.
-      render: shell
     validations:
       required: false
 
