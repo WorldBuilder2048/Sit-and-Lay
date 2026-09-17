@@ -1,0 +1,87 @@
+name: Bug report
+description: Report a problem with the Sit and Lay mod
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill in the fields below —
+        it makes it much easier to figure out what went wrong.
+
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Loader and Minecraft version
+      description: Which loader and MC version were you playing on?
+      options:
+        - Fabric 26.3
+        - Fabric 1.20.1
+        - NeoForge 1.21.1
+        - Forge 1.20.1
+        - Quilt (using the Fabric build)
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Mod version
+      description: You can find this in the .jar filename or on the Modrinth page
+      placeholder: "e.g. 1.6"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug in as much detail as you can
+      placeholder: e.g. — while spinning (/spin), the camera drops into the floor...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run /lay
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log / crash report
+      description: >-
+        If the game crashed, attach the file from your crash-reports
+        folder, or paste a link from mclo.gs / pastebin. You can also
+        just drag the file directly into this field.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other installed mods
+      description: If this might be a mod conflict, list them here
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I've checked that this bug isn't already reported in open Issues
+          required: true
