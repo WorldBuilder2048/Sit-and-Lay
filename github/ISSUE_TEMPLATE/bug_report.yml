@@ -1,0 +1,88 @@
+name: Баг-репорт / Bug report
+description: Сообщить о проблеме с модом Sit and Lay
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что сообщаете о баге! Заполните поля ниже — так будет
+        гораздо проще разобраться, что случилось.
+
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Загрузчик и версия Minecraft
+      description: На каком лоадере и версии MC вы играли?
+      options:
+        - Fabric 26.3
+        - Fabric 1.20.1
+        - NeoForge 1.21.1
+        - Forge 1.20.1
+        - Quilt (совместимость с Fabric-версией)
+        - Другое / не уверен(а)
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Версия мода
+      description: Версию мода можно посмотреть в названии файла .jar или на странице Modrinth
+      placeholder: "например, 1.6"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Что произошло?
+      description: Опишите баг как можно подробнее
+      placeholder: Например — при вращении (/spin) камера проваливается в пол...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести
+      description: Шаги, которые приводят к багу
+      placeholder: |
+        1. Ввести команду /lay
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что должно было произойти
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Лог / краш-репорт
+      description: >-
+        Если игра крашнулась — приложите файл из папки crash-reports,
+        или вставьте ссылку с mclo.gs / pastebin. Можно просто
+        перетащить файл прямо в это поле.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Другие установленные моды
+      description: Если баг может быть связан с конфликтом модов, перечислите их
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Перед отправкой
+      options:
+        - label: Я проверил(а), что такого бага ещё нет среди открытых Issues
+          required: true
