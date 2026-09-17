@@ -1,0 +1,41 @@
+name: Feature request
+description: Suggest a new feature or improvement for Sit and Lay
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! Describe what you'd like to see in the mod.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve / why is it needed
+      description: e.g. — there's no pose for sitting on a ledge with legs dangling
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: How it could work
+      description: Your idea for implementation (optional)
+    validations:
+      required: false
+
+  - type: input
+    id: loader
+    attributes:
+      label: Which loader this applies to
+      description: e.g. "Fabric 26.3", "all versions" — leave blank if not version-specific
+      placeholder: "all versions"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I've checked that this hasn't already been suggested in open Issues
+          required: true
